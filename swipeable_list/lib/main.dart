@@ -37,11 +37,7 @@ class _SwipeListUIState extends State<SwipeListUI> {
               return Dismissible(
                 key: Key(item),
                 child: ListTile(
-                  title: Text('${swipeList[index]}'),
-                  // ignore: unrelated_type_equality_checks
-                  trailing: (index == liked) ? Icon(
-                    Icons.check_circle, color: Colors.green,) : null,
-                ),
+                  title: Text('${swipeList[index]}'),),
                 onDismissed: (DismissDirection dir) {
                   setState(() => this.swipeList.removeAt(index));
                   Scaffold.of(context).showSnackBar(SnackBar(
